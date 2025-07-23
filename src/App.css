@@ -1,38 +1,99 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+background: radial-gradient(circle, #ffffff, #9421e0, #1a0328);
+}
+
+.app {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.795);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app>h1{
+  color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1976d2;
   color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task-list {
+  list-style: none;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f55959;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.task-list li.done  {
+  text-decoration: line-through;
+  background-color: rgb(10, 161, 10);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.task-list button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group button {
+    width: 100%;
   }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .input-group input {
+    font-size: 16px;
+  }
+}
+
